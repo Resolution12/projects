@@ -1,4 +1,4 @@
-import PIL
+import PIL,os
 import matplotlib.pyplot as plt
 
 #create new image
@@ -102,5 +102,6 @@ canvas.ellipse((25, 25, 175, 175), outline=(1, 1, 1))
 fig, ax = plt.subplots(1, 1)
 ax.imshow(emoji)
 fig.show()
-
+directory = os.path.dirname(os.path.abspath(__file__)) 
+emoji.save((directory + '/emoji'), 'PNG')
 
